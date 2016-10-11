@@ -1,0 +1,27 @@
+logs
+output
+target
+
+build.properties
+mvn.properties
+
+.idea
+.checkstyle
+.classpath
+.project
+.settings
+.metadata
+
+*.iml
+*.asc
+*.jj
+*.tmp
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.iml
+*.swp
+
