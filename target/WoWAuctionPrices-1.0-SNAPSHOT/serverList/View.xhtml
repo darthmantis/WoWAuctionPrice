@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewServerListTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewServerListLabel_name}"/>
+                    <h:outputText value="#{serverListController.selected.name}" title="#{bundle.ViewServerListTitle_name}"/>
+                    <h:outputText value="#{bundle.ViewServerListLabel_type}"/>
+                    <h:outputText value="#{serverListController.selected.type}" title="#{bundle.ViewServerListTitle_type}"/>
+                    <h:outputText value="#{bundle.ViewServerListLabel_region}"/>
+                    <h:outputText value="#{serverListController.selected.region}" title="#{bundle.ViewServerListTitle_region}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{serverListController.destroyAndView}" value="#{bundle.ViewServerListDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewServerListEditLink}"/>
+                <br />
+                <h:commandLink action="#{serverListController.prepareCreate}" value="#{bundle.ViewServerListCreateLink}" />
+                <br />
+                <h:commandLink action="#{serverListController.prepareList}" value="#{bundle.ViewServerListShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewServerListIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
