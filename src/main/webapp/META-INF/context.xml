@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/WoWAuctionPrices">
+  <Resource driverClassName="org.postgresql.Driver" maxActive="100" maxIdle="30" maxWait="10000" name="jdbc/test_prices" password="legion" type="javax.sql.DataSource" url="jdbc:postgresql://localhost:5432/test_prices" username="test_auction"/>
+</Context>
