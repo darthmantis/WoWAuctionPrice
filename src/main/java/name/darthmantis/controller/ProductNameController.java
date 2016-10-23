@@ -3,7 +3,6 @@ package name.darthmantis.controller;
 import name.darthmantis.model.ProductName;
 import name.darthmantis.controller.util.JsfUtil;
 import name.darthmantis.controller.util.PaginationHelper;
-import name.darthmantis.controller.ProductNameFacade;
 
 import java.io.Serializable;
 import java.util.ResourceBundle;
